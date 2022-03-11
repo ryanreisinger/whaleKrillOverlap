@@ -1,6 +1,6 @@
 # Prepare distance to shelf
 
-setwd("D:\\UCSC\\Analysis\\megaKrill")
+setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
 
 library(raster)
 library(rgeos)

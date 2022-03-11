@@ -6,7 +6,7 @@ library(spatialEco)
 library(ggplot2)
 library(data.table)
 
-setwd("D:\\UCSC\\Analysis\\megaKrill_HOLD")
+setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
 
 #---------------------------------------
 # Load SSMUs

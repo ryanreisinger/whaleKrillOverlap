@@ -2,7 +2,7 @@ library(raster)
 library(sf)
 library(dplyr)
 
-setwd("D:\\UCSC\\Analysis\\megaKrill_HOLD")
+setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
 
 which_whale <- "minke"
 

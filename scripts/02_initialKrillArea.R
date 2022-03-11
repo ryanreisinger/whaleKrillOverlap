@@ -8,7 +8,7 @@ library(SOmap)
 library(viridis)
 library(ggplot2)
 
-setwd("D:\\UCSC\\Analysis\\megaKrill")
+setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
 
 which_whale <- "minke"
 

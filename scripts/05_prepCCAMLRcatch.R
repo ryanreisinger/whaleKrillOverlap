@@ -6,7 +6,7 @@ library(raster)
 library(spatialEco)
 library(sf)
 
-setwd("D:\\UCSC\\Analysis\\megaKrill")
+setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
 
 #------------------------------------
 # Get data

@@ -1,7 +1,7 @@
 # Look at annual total catch in CCAMLR Statistical Bulletin 33
 # https://www.ccamlr.org/en/document/data/ccamlr-statistical-bulletin-vol-33
 
-setwd("D:\\UCSC\\Analysis\\megaKrill")
+setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
 
 library(dplyr)
 

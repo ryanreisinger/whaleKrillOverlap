@@ -1,6 +1,6 @@
 ## Data summary
 
-setwd("D:\\UCSC\\Analysis\\megaKrill")
+setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
 
 library(dplyr)
 library(ggplot2)

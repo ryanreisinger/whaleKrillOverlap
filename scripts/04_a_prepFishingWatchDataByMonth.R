@@ -3,7 +3,7 @@
 ## Based on:
 ## https://globalfishingwatch.org/data-blog/working-with-our-downloadable-public-data-in-r/
 
-setwd("C:\\Users\\Ryan Reisinger\\Documents\\Academic\\UCSC\\Work\\Analysis\\megaKrill")
+setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
 
 library(tidyverse) # for general data wrangling and plotting
 library(furrr) # for parallel operations on lists

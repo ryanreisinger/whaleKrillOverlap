@@ -1,6 +1,6 @@
 # Calculate overlap between whale predicted behaviour and fishing
 
-setwd("D:\\UCSC\\Analysis\\megaKrill_HOLD")
+setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
 
 library(raster)
 library(sf)

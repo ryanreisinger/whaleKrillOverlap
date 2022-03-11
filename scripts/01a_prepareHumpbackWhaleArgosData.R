@@ -2,7 +2,7 @@
 
 ## Ryan Reisinger
 
-setwd("D:\\UCSC\\Analysis\\megaKrill")
+setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
 
 library(foieGras)
 library(dplyr)

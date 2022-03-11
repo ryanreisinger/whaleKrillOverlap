@@ -6,7 +6,7 @@ library(easycsv)
 library(ggplot2)
 library(SOmap)
 
-setwd("D:\\UCSC\\Analysis\\megaKrill_HOLD")
+setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
       
 # List the files
 fls <- list.files("D:\\UCSC\\Analysis\\mega\\data_private\\data_iwc\\IWCDBv6.1\\IndivData-CSVfmt\\", full.names = T)

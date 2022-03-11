@@ -1,6 +1,6 @@
 # Format and filter CCAMLR authorized vessels list
 
-setwd("C:\\Users\\Ryan Reisinger\\Documents\\Academic\\UCSC\\Work\\Analysis\\megaKrill")
+setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
 
 library(dplyr)
 

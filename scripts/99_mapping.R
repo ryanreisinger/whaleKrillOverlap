@@ -9,7 +9,7 @@ library(scico)
 library(patchwork)
 library(ggsn)
 
-setwd("D:\\UCSC\\Analysis\\megaKrill_HOLD\\")
+setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
 
 # General
 wgs_proj <- "+proj=longlat +datum=WGS84 +no_defs"

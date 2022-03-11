@@ -1,6 +1,6 @@
 # Extract environmental covariates
 
-setwd("D:\\UCSC\\Analysis\\megaKrill_HOLD")
+setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
 
 library(raster)
 library(rgeos)

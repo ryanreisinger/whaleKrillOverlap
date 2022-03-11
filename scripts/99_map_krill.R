@@ -1,6 +1,6 @@
 # Map krillbase data with humpback tracks
 
-setwd("C:\\Users\\Ryan Reisinger\\Documents\\Academic\\UCSC\\Work\\Analysis\\mega")
+setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
 
 library(raster)
 library(sp)

@@ -1,7 +1,7 @@
 library(dplyr)
 library(ggplo2)
 
-setwd("D:\\UCSC\\Analysis\\megaKrill")
+setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
 
 all_tracks <- data.frame()
 

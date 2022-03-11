@@ -1,6 +1,6 @@
 # Plot phenology
 
-setwd("D:\\UCSC\\Analysis\\megaKrill_HOLD")
+setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
 
 library(ggplot2)
 library(dplyr)
