@@ -1,0 +1,35 @@
+"Authorising.Country","Vessel","Flag","Area.s.","Target.Species","start_date","end_date","IMO_number","Vessel_other_name"
+"Chile","Antarctic Endeavour","Chile","Subarea 48.1 Subarea 48.2 Subarea 48.3","Euphausia superba",2016-12-01,2021-11-30,8717453,NA
+"Chile","Betanzos","Chile","Subarea 48.1 Subarea 48.2 Subarea 48.3 Subarea 48.4","Euphausia superba",2011-12-01,2016-11-30,7310923,NA
+"Chile","Cabo de Hornos","Chile","Subarea 48.1 Subarea 48.2 Subarea 48.3","Euphausia superba",2013-12-01,2019-11-30,7404372,NA
+"Chile","Diego Ramirez","Chile","Subarea 48.1 Subarea 48.2 Subarea 48.3 Subarea 48.4","Euphausia superba",2013-12-01,2014-11-30,7336460,NA
+"China","An Xing Hai","China","Subarea 48.1 Subarea 48.2","Euphausia superba",2011-12-01,2012-08-31,8724339,NA
+"China","Fu Rong Hai","China","Subarea 48.1 Subarea 48.2 Subarea 48.3 Subarea 48.4 Division 58.4.1 Division 58.4.2","Euphausia superba",2012-12-01,2020-11-30,7238113,"Fukuei Maru"
+"China","Fu Yuan Yu 9818","China","Subarea 48.1 Subarea 48.2 Subarea 48.3 Subarea 48.4","Euphausia superba",2019-12-01,2020-11-30,7817452,NA
+"China","Kai Fu Hao","China","Subarea 48.1 Subarea 48.2 Subarea 48.3","Euphausia superba",2014-12-01,2015-11-30,8907022,NA
+"China","Kai Li","China","Subarea 48.1 Subarea 48.2","Euphausia superba",2011-12-01,2015-11-30,8607244,NA
+"China","Kai Shun","China","Subarea 48.1 Subarea 48.2 Subarea 48.3","Euphausia superba",2014-12-01,2015-11-30,8607268,NA
+"China","Kai Xin","China","Subarea 48.1 Subarea 48.2","Euphausia superba",2011-12-01,2013-11-30,8836027,NA
+"China","Kai Yu","China","Subarea 48.1 Subarea 48.2","Euphausia superba",2011-12-01,2014-11-30,8907072,NA
+"China","Feolent","Ukraine","Subarea 48.1 Subarea 48.2 Subarea 48.3 Subarea 48.4","Euphausia superba",2012-12-01,2013-11-30,7817452,NA
+"China","Long Da","China","Subarea 48.1 Subarea 48.2 Subarea 48.3 Subarea 48.4","Euphausia superba",2014-12-01,2017-11-30,8225412,NA
+"China","Long Fa","China","Subarea 48.1 Subarea 48.2 Subarea 48.3","Euphausia superba",2014-12-01,2020-11-30,8607115,NA
+"China","Long Teng","China","Subarea 48.1 Subarea 48.2 Subarea 48.3","Euphausia superba",2013-12-01,2020-11-30,8607373,NA
+"China","Ming Kai","China","Subarea 48.1 Subarea 48.2 Subarea 48.3","Euphausia superba",2014-12-01,2017-11-30,8908117,NA
+"Japan","Fukuei Maru","Japan","Subarea 48.1 Subarea 48.2 Subarea 48.3","Euphausia superba",2011-12-01,2012-07-31,7238113,NA
+"Korea, Republic of","Adventure","Korea, Republic of","Subarea 48.1 Subarea 48.2 Subarea 48.3","Euphausia superba",2012-07-13,2013-09-26,8225412,"Long Da"
+"Korea, Republic of","Dongsan Ho","Korea, Republic of","Subarea 48.1 Subarea 48.2 Subarea 48.3 Subarea 48.4 Subarea 48.5 Subarea 48.6","Euphausia superba",2011-12-01,2012-08-31,7410242,NA
+"Korea, Republic of","Insung Ho","Korea, Republic of","Subarea 48.1 Subarea 48.2 Subarea 48.3","Euphausia superba",2011-12-01,2024-06-24,7042538,NA
+"Korea, Republic of","Kwang Ja Ho","Korea, Republic of","Subarea 48.1 Subarea 48.2","Euphausia superba",2011-12-01,2024-06-24,8505977,NA
+"Korea, Republic of","Maestro","Korea, Republic of","Subarea 48.1 Subarea 48.2 Subarea 48.3 Subarea 48.4 Subarea 48.5 Subarea 48.6","Euphausia superba",2011-12-01,2012-11-30,8607385,"Sejong"
+"Korea, Republic of","Sejong","Korea, Republic of","Subarea 48.1 Subarea 48.2 Subarea 48.3","Euphausia superba",2013-09-27,2025-07-04,8607385,"Maestro"
+"Norway","Antarctic Endurance","Norway","Subarea 48.1 Subarea 48.2 Subarea 48.3","Euphausia superba",2018-12-01,2021-11-30,9827891,NA
+"Norway","Antarctic Sea","Norway","Subarea 48.1 Subarea 48.2 Subarea 48.3 Subarea 48.4","Euphausia superba",2012-12-01,2021-11-30,9160358,"Thorshovdi"
+"Norway","Thorshovdi","Norway","Subarea 48.1 Subarea 48.2 Subarea 48.3 Subarea 48.4","Euphausia superba",2011-12-01,2012-11-30,9160358,NA
+"Norway","Juvel","Norway","Subarea 48.1 Subarea 48.2 Subarea 48.3 Subarea 48.4","Euphausia superba",2011-12-01,2020-11-30,9256664,NA
+"Norway","Saga Sea","Norway","Subarea 48.1 Subarea 48.2 Subarea 48.3 Subarea 48.4","Euphausia superba",2011-12-01,2021-11-30,7390416,NA
+"Poland","Alina","Poland","Subarea 48.1 Subarea 48.2 Subarea 48.3 Subarea 48.4","Euphausia superba",2013-12-01,2014-11-30,8907137,NA
+"Poland","Alina GDY-46","Poland","Subarea 48.1 Subarea 48.2 Subarea 48.3","Euphausia superba",2012-12-01,2013-11-30,8907046,NA
+"Poland","Saga","Poland","Subarea 48.1 Subarea 48.2 Subarea 48.3 Subarea 48.4","Euphausia superba",2013-12-01,2014-11-30,8607191,NA
+"Poland","Sirius","Poland","Subarea 48.1 Subarea 48.2 Subarea 48.3","Euphausia superba",2012-12-01,2013-11-30,8907149,NA
+"Ukraine","More Sodruzhestva","Ukraine","Subarea 48.1 Subarea 48.2 Subarea 48.3 Subarea 48.4","Euphausia superba",2012-12-01,2021-11-30,8724315,NA
