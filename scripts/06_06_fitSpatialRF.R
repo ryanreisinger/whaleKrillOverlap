@@ -44,11 +44,26 @@ these_tracks <- readRDS(paste0("./data_out/spmods_tracks_w_distance&env_", which
 grd_dataframe <- readRDS(paste0("./data_out/spmods_grid_w_distance&env_", which_whale, "_", this_month, ".RDS"))
 
 # Double check that ice cv is 0 instead of NA
+# Current month
 these_tracks$ICEDIST_cv[is.na(these_tracks$ICEDIST_cv)] <- 0
 grd_dataframe$ICEDIST_cv[is.na(grd_dataframe$ICEDIST_cv)] <- 0
 
 these_tracks$ICECONC_cv[is.na(these_tracks$ICECONC_cv)] <- 0
 grd_dataframe$ICECONC_cv[is.na(grd_dataframe$ICECONC_cv)] <- 0
+
+# Lag 1
+these_tracks$ICEDIST_cv_1[is.na(these_tracks$ICEDIST_cv_1)] <- 0
+grd_dataframe$ICEDIST_cv_1[is.na(grd_dataframe$ICEDIST_cv_1)] <- 0
+
+these_tracks$ICECONC_cv_1[is.na(these_tracks$ICECONC_cv_1)] <- 0
+grd_dataframe$ICECONC_cv_1[is.na(grd_dataframe$ICECONC_cv_1)] <- 0
+
+# Lag 2
+these_tracks$ICEDIST_cv_2[is.na(these_tracks$ICEDIST_cv_2)] <- 0
+grd_dataframe$ICEDIST_cv_2[is.na(grd_dataframe$ICEDIST_cv_2)] <- 0
+
+these_tracks$ICECONC_cv_2[is.na(these_tracks$ICECONC_cv_2)] <- 0
+grd_dataframe$ICECONC_cv_2[is.na(grd_dataframe$ICECONC_cv_2)] <- 0
 
 # Some distance covariates are all NA when locs were on land and no path could be calculated
 # - remove these columns
@@ -91,7 +106,7 @@ rm(this_result)
 
 # Get variable importance
 imp <- importance(m_0)
-imp <- imp[(length(imp)-7):length(imp)]
+imp <- imp[(length(imp)-19):length(imp)]
 out <- data.frame("importance" = imp,
                   "variable" = names(imp))
 out$species <- which_whale

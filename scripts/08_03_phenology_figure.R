@@ -94,7 +94,7 @@ p1 <- ggplot(filter(dat.summary, species == "humpback"), aes(x = month, y = nor,
         axis.title = element_blank(),
         axis.text.y = element_blank(),
         panel.border = element_blank()) +
-  labs(subtitle = "a) Humpback whale")
+  labs(subtitle = "A Humpback whale")
 
 p2 <- ggplot(filter(dat.summary, species == "minke"), aes(x = month, y = nor, group = what, colour = what, fill = what)) +
   # geom_point() +
@@ -112,7 +112,7 @@ p2 <- ggplot(filter(dat.summary, species == "minke"), aes(x = month, y = nor, gr
         axis.title = element_blank(),
         axis.text.y = element_blank(),
         panel.border = element_blank()) +
-  labs(subtitle = "b) Minke whale")
+  labs(subtitle = "B Minke whale")
 
 p3 <- ggplot(fishdat, aes(x = month, y = n, group = what, colour = what, fill = what)) +
   # geom_point() +
@@ -130,7 +130,7 @@ p3 <- ggplot(fishdat, aes(x = month, y = n, group = what, colour = what, fill = 
         axis.title = element_blank(),
         axis.text.y = element_blank(),
         panel.border = element_blank()) +
-  labs(subtitle = "c) Fishing")
+  labs(subtitle = "C Fishing")
 
 p <- p1 + p2 + p3 + plot_layout(guides = "collect")
 

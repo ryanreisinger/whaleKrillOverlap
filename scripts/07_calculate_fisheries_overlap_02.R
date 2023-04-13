@@ -220,12 +220,13 @@ p1 <- ggplot(data = master_dummy, aes(x = month, y = SSMU, fill = overlap_correc
              labeller = labeller(species = species_labs)) +
   scale_fill_viridis_c(option = "inferno", name = "Sum of overlap index values,\narea-corrected", trans = "sqrt") +
   theme_bw() +
-  theme(legend.position = "bottom") +
+  theme(legend.position = "bottom",
+        legend.key.width = unit(25, "mm")) +
   labs(x = "Month", y = "Small-scale Management Unit")
 
 png("./figures/heat_overlap.png",
     height = 90/0.7,
-    width = 85/0.7,
+    width = 150/0.7,
     units = "mm",
     res = 700)
 plot(p1)
@@ -275,7 +276,7 @@ p3 <- ggplot(data = master_dummy, aes(x = month, y = SSMU, fill = overlap)) +
 
 png("./figures/heat_whale.png",
     height = 90/0.7,
-    width = 120/0.7,
+    width = 85/0.7,
     units = "mm",
     res = 700)
 plot(p3)

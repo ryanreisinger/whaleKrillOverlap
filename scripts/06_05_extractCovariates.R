@@ -4,12 +4,13 @@ setwd("D:\\UCSC\\Analysis\\whaleKrillOverlap\\")
 
 library(raster)
 library(rgeos)
+library(lubridate)
 
 for (k in c("humpback", "minke")) {
   
 # which_whale <- "humpback"
   which_whale <- k
-  print(k)
+  print(which_whale)
 
 if (which_whale == "humpback") {
   the_months <- seq(1, 7)
@@ -23,6 +24,14 @@ for (k in the_months) {
   
   this_month <- k
   cat("Extracting month", this_month, "\n")
+  
+  # Create lagged months
+  fx <- this_month
+  fx <- lubridate::ymd(paste("2015", fx, "15", sep = "-"))
+  this_month_1 <- fx %m-% months(1)
+  this_month_1 <- as.integer(month(this_month_1))
+  this_month_2 <- fx %m-% months(2)
+  this_month_2 <- as.integer(month(this_month_2))
 
 # Get data
 these_tracks <- readRDS(paste0("./data_out/spmods_tracks_w_distance_", which_whale, "_", this_month, ".RDS"))
@@ -41,7 +50,10 @@ these_tracks$SHELF <- raster::extract(shelf, these_tracks[, c("lon", "lat")])
 grd_dataframe$SHELF <- raster::extract(shelf, grd_dataframe[, c("x", "y")])
 rm(shelf)
 
+#---------------------------------------------
 # SST
+
+# Current month
 # Mean
 sst_mean <- raster(paste0("./data_out/sst/mean/sst_mean_", this_month, ".grd"))
 # plot(sst_mean, main = paste0("SST |", this_month))
@@ -53,7 +65,34 @@ sst_cv <- raster(paste0("./data_out/sst/cv/sst_cv_", this_month, ".grd"))
 these_tracks$SST_cv <- raster::extract(sst_cv, these_tracks[, c("lon", "lat")])
 grd_dataframe$SST_cv <- raster::extract(sst_cv, grd_dataframe[, c("x", "y")])
 
+# Lag 1
+# Mean
+sst_mean <- raster(paste0("./data_out/sst/mean/sst_mean_", this_month_1, ".grd"))
+# plot(sst_mean, main = paste0("SST |", this_month))
+these_tracks$SST_mean_1 <- raster::extract(sst_mean, these_tracks[, c("lon", "lat")])
+grd_dataframe$SST_mean_1 <- raster::extract(sst_mean, grd_dataframe[, c("x", "y")])
+# CV
+sst_cv <- raster(paste0("./data_out/sst/cv/sst_cv_", this_month_1, ".grd"))
+# plot(sst_cv, main = paste0("SST CV |", this_month))
+these_tracks$SST_cv_1 <- raster::extract(sst_cv, these_tracks[, c("lon", "lat")])
+grd_dataframe$SST_cv_1 <- raster::extract(sst_cv, grd_dataframe[, c("x", "y")])
+
+# Lag 2
+# Mean
+sst_mean <- raster(paste0("./data_out/sst/mean/sst_mean_", this_month_2, ".grd"))
+# plot(sst_mean, main = paste0("SST |", this_month))
+these_tracks$SST_mean_2 <- raster::extract(sst_mean, these_tracks[, c("lon", "lat")])
+grd_dataframe$SST_mean_2 <- raster::extract(sst_mean, grd_dataframe[, c("x", "y")])
+# CV
+sst_cv <- raster(paste0("./data_out/sst/cv/sst_cv_", this_month_1, ".grd"))
+# plot(sst_cv, main = paste0("SST CV |", this_month))
+these_tracks$SST_cv_2 <- raster::extract(sst_cv, these_tracks[, c("lon", "lat")])
+grd_dataframe$SST_cv_2 <- raster::extract(sst_cv, grd_dataframe[, c("x", "y")])
+
+#---------------------------------------------
 # SEA ICE CONCENTRATION
+
+# Current month
 # Mean
 ice_conc_mean <- raster(paste0("./data_out/sea_ice/conc_mean/conc_mean_", this_month, ".grd"))
 # plot(ice_conc_mean, main = paste0("Sea ice concentration |", this_month))
@@ -65,7 +104,34 @@ plot(ice_conc_cv, main = paste0("Sea ice concentration CV |", this_month))
 these_tracks$ICECONC_cv <- raster::extract(ice_conc_cv, these_tracks[, c("lon", "lat")])
 grd_dataframe$ICECONC_cv <- raster::extract(ice_conc_cv, grd_dataframe[, c("x", "y")])
 
+# Lag 1
+# Mean
+ice_conc_mean <- raster(paste0("./data_out/sea_ice/conc_mean/conc_mean_", this_month_1, ".grd"))
+# plot(ice_conc_mean, main = paste0("Sea ice concentration |", this_month))
+these_tracks$ICECONC_mean_1 <- raster::extract(ice_conc_mean, these_tracks[, c("lon", "lat")])
+grd_dataframe$ICECONC_mean_1 <- raster::extract(ice_conc_mean, grd_dataframe[, c("x", "y")])
+# CV
+ice_conc_cv <- raster(paste0("./data_out/sea_ice/conc_cv/conc_cv_", this_month_1, ".grd"))
+plot(ice_conc_cv, main = paste0("Sea ice concentration CV |", this_month))
+these_tracks$ICECONC_cv_1 <- raster::extract(ice_conc_cv, these_tracks[, c("lon", "lat")])
+grd_dataframe$ICECONC_cv_1 <- raster::extract(ice_conc_cv, grd_dataframe[, c("x", "y")])
+
+# Lag 2
+# Mean
+ice_conc_mean <- raster(paste0("./data_out/sea_ice/conc_mean/conc_mean_", this_month_2, ".grd"))
+# plot(ice_conc_mean, main = paste0("Sea ice concentration |", this_month))
+these_tracks$ICECONC_mean_2 <- raster::extract(ice_conc_mean, these_tracks[, c("lon", "lat")])
+grd_dataframe$ICECONC_mean_2 <- raster::extract(ice_conc_mean, grd_dataframe[, c("x", "y")])
+# CV
+ice_conc_cv <- raster(paste0("./data_out/sea_ice/conc_cv/conc_cv_", this_month_2, ".grd"))
+plot(ice_conc_cv, main = paste0("Sea ice concentration CV |", this_month))
+these_tracks$ICECONC_cv_2 <- raster::extract(ice_conc_cv, these_tracks[, c("lon", "lat")])
+grd_dataframe$ICECONC_cv_2 <- raster::extract(ice_conc_cv, grd_dataframe[, c("x", "y")])
+
+#---------------------------------------------
 # DISTANCE TO ICE EDGE
+
+# Current month
 # Mean
 ice_dist_mean <- raster(paste0("./data_out/sea_ice/dist_mean/dist_mean_", this_month, ".grd"))
 # plot(ice_dist_mean, main = paste0("Distance to sea ice edge |", this_month))
@@ -77,6 +143,31 @@ ice_dist_cv <- raster(paste0("./data_out/sea_ice/dist_cv/dist_cv_", this_month, 
 these_tracks$ICEDIST_cv <- raster::extract(ice_dist_cv, these_tracks[, c("lon", "lat")])
 grd_dataframe$ICEDIST_cv <- raster::extract(ice_dist_cv, grd_dataframe[, c("x", "y")])
 
+# Lag 1
+# Mean
+ice_dist_mean <- raster(paste0("./data_out/sea_ice/dist_mean/dist_mean_", this_month_1, ".grd"))
+# plot(ice_dist_mean, main = paste0("Distance to sea ice edge |", this_month))
+these_tracks$ICEDIST_mean_1 <- raster::extract(ice_dist_mean, these_tracks[, c("lon", "lat")])
+grd_dataframe$ICEDIST_mean_1 <- raster::extract(ice_dist_mean, grd_dataframe[, c("x", "y")])
+# CV
+ice_dist_cv <- raster(paste0("./data_out/sea_ice/dist_cv/dist_cv_", this_month_1, ".grd"))
+# plot(ice_dist_cv, main = paste0("Distance to sea ice edge CV |", this_month))
+these_tracks$ICEDIST_cv_1 <- raster::extract(ice_dist_cv, these_tracks[, c("lon", "lat")])
+grd_dataframe$ICEDIST_cv_1 <- raster::extract(ice_dist_cv, grd_dataframe[, c("x", "y")])
+
+# Lag 2
+# Mean
+ice_dist_mean <- raster(paste0("./data_out/sea_ice/dist_mean/dist_mean_", this_month_2, ".grd"))
+# plot(ice_dist_mean, main = paste0("Distance to sea ice edge |", this_month))
+these_tracks$ICEDIST_mean_2 <- raster::extract(ice_dist_mean, these_tracks[, c("lon", "lat")])
+grd_dataframe$ICEDIST_mean_2 <- raster::extract(ice_dist_mean, grd_dataframe[, c("x", "y")])
+# CV
+ice_dist_cv <- raster(paste0("./data_out/sea_ice/dist_cv/dist_cv_", this_month_2, ".grd"))
+# plot(ice_dist_cv, main = paste0("Distance to sea ice edge CV |", this_month))
+these_tracks$ICEDIST_cv_2 <- raster::extract(ice_dist_cv, these_tracks[, c("lon", "lat")])
+grd_dataframe$ICEDIST_cv_2 <- raster::extract(ice_dist_cv, grd_dataframe[, c("x", "y")])
+
+#---------------------------------------------
 # Save
 saveRDS(these_tracks, paste0("./data_out/spmods_tracks_w_distance&env_", which_whale, "_", this_month, ".RDS"))
 saveRDS(grd_dataframe, paste0("./data_out/spmods_grid_w_distance&env_", which_whale, "_", this_month, ".RDS"))
